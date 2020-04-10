@@ -40,9 +40,10 @@ matrix:
       jdk: openjdk8
       env: TARGET=java
       stage: smoke-test 
-      arch:
-        - s390x
-        - amd64
+      arch: s390x
+      addons:
+        apt:
+          - maven
     - os: linux
       dist: boinic
       compiler: clang
