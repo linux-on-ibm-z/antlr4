@@ -55,6 +55,7 @@ matrix:
             - g++-5
             - uuid-dev
             - clang-3.7
+            - maven
     - os: linux
       dist: trusty
       compiler: clang
