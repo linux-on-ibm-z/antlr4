@@ -22,11 +22,25 @@ matrix:
       dist: trusty
       compiler: clang
       jdk: openjdk8
-      jobs:
-        include:
-         - arch: amd64
-         - arch: s390x
-           dist: bionic
+      env:
+        - TARGET=cpp
+        - CXX=g++-5
+        - GROUP=LEXER
+      stage: main-test
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.7
+          packages:
+            - g++-5
+            - uuid-dev
+            - clang-3.7
+    - os: linux
+      dist: boinic
+      compiler: clang
+      jdk: openjdk8
+      arch: s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
@@ -45,9 +59,6 @@ matrix:
       dist: trusty
       compiler: clang
       jdk: openjdk8
-      arch:
-        - amd64
-        - s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
