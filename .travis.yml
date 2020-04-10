@@ -36,6 +36,13 @@ matrix:
             - g++-5
             - uuid-dev
             - clang-3.7
+   - os: linux
+      jdk: openjdk8
+      env: TARGET=java
+      stage: smoke-test 
+      arch:
+        - s390x
+        - amd64
     - os: linux
       dist: boinic
       compiler: clang
