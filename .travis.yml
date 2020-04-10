@@ -36,7 +36,7 @@ matrix:
             - g++-5
             - uuid-dev
             - clang-3.7
-   - os: linux
+    - os: linux
       jdk: openjdk8
       env: TARGET=java
       stage: smoke-test 
