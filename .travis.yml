@@ -22,6 +22,9 @@ matrix:
       dist: trusty
       compiler: clang
       jdk: openjdk8
+      arch:
+        - amd64
+        - s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
@@ -40,6 +43,9 @@ matrix:
       dist: trusty
       compiler: clang
       jdk: openjdk8
+      arch:
+        - amd64
+        - s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
