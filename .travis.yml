@@ -243,5 +243,5 @@ script:
     rc=$?;
     cat target/surefire-reports/*.dumpstream || true;
     echo $rc;
-    top ;
+    ps -aef ;
     exit $rc
