@@ -242,4 +242,5 @@ script:
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
     cat target/surefire-reports/*.dumpstream || true;
+    echo $rc;
     exit $rc
