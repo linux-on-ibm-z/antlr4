@@ -45,11 +45,18 @@ matrix:
         apt:
           - maven
     - os: linux
+      jdk: openjdk8
+      env: TARGET=java
+      stage: smoke-test
+    - os: linux
       dist: bionic
       jdk: openjdk8
       env: TARGET=go
       stage: main-test
       arch: s390x
+      addons:
+        apt:
+          - maven
     - os: linux
       dist: boinic
       compiler: clang
@@ -178,10 +185,6 @@ matrix:
 #      jdk: openjdk7
 #      env: TARGET=java
 #      stage: extended-test
-#    - os: linux
-#      jdk: openjdk8
-#      env: TARGET=java
-#      stage: smoke-test
 #    - os: linux
 #      jdk: openjdk8
 #      env: TARGET=csharp
