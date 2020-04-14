@@ -58,6 +58,11 @@ matrix:
         apt:
           - maven
     - os: linux
+      dist: trusty
+      jdk: openjdk8
+      env: TARGET=go
+      stage: main-test
+    - os: linux
       dist: boinic
       compiler: clang
       jdk: openjdk11
@@ -249,6 +254,7 @@ script:
   - |
     cd runtime-testsuite;
     ps -aef ;
+    go version ;
     java -version;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
