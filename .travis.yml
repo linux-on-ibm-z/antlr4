@@ -57,6 +57,7 @@ matrix:
       addons:
         apt:
           - maven
+          - golang
     - os: linux
       dist: trusty
       jdk: openjdk8
