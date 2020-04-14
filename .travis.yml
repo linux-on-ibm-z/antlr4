@@ -37,7 +37,7 @@ matrix:
             - uuid-dev
             - clang-3.7
     - os: linux
-      jdk: openjdk8
+      jdk: openjdk11
       env: TARGET=java
       stage: smoke-test 
       arch: s390x
@@ -239,6 +239,7 @@ before_install:
 script:
   - |
     cd runtime-testsuite;
+    java -version;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
     cat target/surefire-reports/*.dumpstream || true;
