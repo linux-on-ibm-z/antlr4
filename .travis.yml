@@ -45,6 +45,12 @@ matrix:
         apt:
           - maven
     - os: linux
+      dist: bionic
+      jdk: openjdk8
+      env: TARGET=go
+      stage: main-test
+      arch: s390x
+    - os: linux
       dist: boinic
       compiler: clang
       jdk: openjdk8
