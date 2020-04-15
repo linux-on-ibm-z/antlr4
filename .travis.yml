@@ -38,6 +38,36 @@ matrix:
             - uuid-dev
             - clang-3.7
     - os: linux
+      jdk: openjdk8
+      env: TARGET=python2
+      stage: main-test
+    - os: linux
+      jdk: openjdk8
+      env: TARGET=python3
+      addons:
+        apt:
+          sources:
+            - deadsnakes # source required so it finds the package definition below
+          packages:
+            - python3.7
+      stage: main-test
+    - os: linux
+      jdk: openjdk11
+      arch: s390x
+      env: TARGET=python2
+      stage: main-test
+    - os: linux
+      jdk: openjdk11
+      arch: s390x
+      env: TARGET=python3
+      addons:
+        apt:
+          sources:
+            - deadsnakes # source required so it finds the package definition below
+          packages:
+            - python3.7
+      stage: main-test
+    - os: linux
       jdk: openjdk11
       env: TARGET=java
       stage: smoke-test 
