@@ -56,6 +56,9 @@ matrix:
       arch: s390x
       env: TARGET=python2
       stage: main-test
+      addons:
+        apt:
+          - maven
     - os: linux
       jdk: openjdk11
       arch: s390x
@@ -66,6 +69,7 @@ matrix:
             - deadsnakes # source required so it finds the package definition below
           packages:
             - python3.7
+            - maven
       stage: main-test
     - os: linux
       jdk: openjdk11
