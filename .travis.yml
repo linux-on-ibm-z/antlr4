@@ -42,6 +42,20 @@ matrix:
       env: TARGET=python2
       stage: main-test
     - os: linux
+      dist: trusty
+      jdk: openjdk8
+      env: TARGET=javascript
+      stage: main-test
+    - os: linux
+      dist: boinic
+      jdk: openjdk11
+      arch: s390x
+      env: TARGET=javascript
+      stage: main-test
+      addons:
+        apt:
+          - maven
+    - os: linux
       jdk: openjdk8
       env: TARGET=python3
       addons:
