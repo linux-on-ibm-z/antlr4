@@ -38,6 +38,39 @@ matrix:
             - uuid-dev
             - clang-3.7
     - os: linux
+      dist: trusty
+      jdk: openjdk7
+      env: TARGET=java
+      stage: extended-test
+    - os: linux
+      dist: bionic
+      jdk: openjdk11
+      env: TARGET=java
+      arch: s390x
+      stage: extended-test
+      addons:
+        apt:
+          - maven
+    - os: linux
+      language: php
+      php:
+        - 7.2
+      jdk: openjdk8
+      env: TARGET=php
+      stage: main-test
+    - os: linux
+      language: php
+      dist: bionic
+      arch: s390x
+      php:
+        - 7.2
+      jdk: openjdk11
+      env: TARGET=php
+      stage: main-test
+      addons:
+        apt:
+          - maven
+    - os: linux
       jdk: openjdk8
       env: TARGET=python2
       stage: main-test
