@@ -254,14 +254,10 @@ before_install:
 
 script:
   - |
-    set -e ;
     cd runtime-testsuite;
-    ps -aef ;
-    go version ;
     java -version;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
-    cat target/surefire-reports/*.dumpstream || true;
     echo $rc;
-    ps -aef ;
+    cat target/surefire-reports/*.dumpstream || true;
     exit $rc
