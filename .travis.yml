@@ -146,24 +146,21 @@ matrix:
       env: TARGET=go
       stage: main-test
     - os: linux
-      dist: boinic
+      dist: bionic
       compiler: clang
       jdk: openjdk11
       arch: s390x
       env:
         - TARGET=cpp
-        - CXX=g++-5
+        - CXX=g++
         - GROUP=LEXER
       stage: main-test
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.7
           packages:
-            - g++-5
+            - g++
             - uuid-dev
-            - clang-3.7
+            - clang
             - maven
     - os: linux
       dist: trusty
