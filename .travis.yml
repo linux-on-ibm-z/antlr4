@@ -368,10 +368,9 @@ before_install:
 script:
   - |
     cd runtime-testsuite;
-    ps -w | sort ;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
-    ps -w | sort ;
+    echo $!;
     cat target/surefire-reports/*.dumpstream || true;
-    ps -w | sort ;
-    exit $rc
+    exit $rc;
+    exit 0
