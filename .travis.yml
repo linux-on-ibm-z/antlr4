@@ -80,7 +80,7 @@ matrix:
       env: TARGET=javascript
       stage: main-test
     - os: linux
-      dist: boinic
+      dist: bionic
       jdk: openjdk11
       arch: s390x
       env: TARGET=javascript
@@ -187,18 +187,15 @@ matrix:
       arch: s390x
       env:
         - TARGET=cpp
-        - CXX=g++-5
+        - CXX=g++
         - GROUP=PARSER
       stage: main-test
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.7
           packages:
-            - g++-5
+            - g++
             - uuid-dev
-            - clang-3.7
+            - clang
             - maven
     - os: linux
       dist: trusty
@@ -226,18 +223,15 @@ matrix:
       arch: s390x
       env:
         - TARGET=cpp
-        - CXX=g++-5
+        - CXX=g++
         - GROUP=RECURSION
       stage: main-test
       addons:
         apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.7
           packages:
-            - g++-5
+            - g++
             - uuid-dev
-            - clang-3.7
+            - clang
             - maven
 #    - os: osx
 #     compiler: clang
