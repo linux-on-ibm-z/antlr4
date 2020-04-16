@@ -1943,7 +1943,7 @@ public class TestPerformance extends BaseJavaToolTest {
 		}
 	}
 
-	@Test(timeout = 40000)
+	@Test(timeout = 20000)
 	public void testExponentialInclude() {
 		String grammarFormat =
 			"parser grammar Level_%d_%d;\n" +
