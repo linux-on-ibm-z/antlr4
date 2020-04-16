@@ -184,9 +184,10 @@ matrix:
             - uuid-dev
             - clang-3.7
     - os: linux
-      dist: boinic
+      dist: bionic
       compiler: clang
       jdk: openjdk11
+      arch: s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
@@ -222,9 +223,10 @@ matrix:
             - clang-3.7
             
     - os: linux
-      dist: boinic
+      dist: bionic
       compiler: clang
       jdk: openjdk11
+      arch: s390x
       env:
         - TARGET=cpp
         - CXX=g++-5
