@@ -369,7 +369,9 @@ script:
   - |
     cd runtime-testsuite;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
-    rc=$?;
-    kill -9 $!;
+    rc=$?
     cat target/surefire-reports/*.dumpstream || true;
     exit $rc
+    
+after_failure:
+    - tail -n 5000 mvn-test.log
