@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
+set -uo pipefail
 
 mvn -q -Dparallel=methods -DthreadCount=4 -Dtest=go.* test
