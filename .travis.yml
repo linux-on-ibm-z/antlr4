@@ -17,7 +17,6 @@ stages:
   - extended-test
 
 matrix:
-  fast_finish: true
   include:
     - os: linux
       dist: trusty
