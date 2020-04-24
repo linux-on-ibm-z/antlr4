@@ -326,6 +326,7 @@ matrix:
 
 before_install:
   - f="./.travis/before-install-$TRAVIS_OS_NAME-$TARGET.sh"; ! [ -x "$f" ] || "$f"
+  - ps -aef
   - if [[ $(uname -m) != 's390x' ]]; then 
      wget http://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/8.0.5.41/linux/s390x/ibm-java-s390x-sdk-8.0-5.41.bin ;
      wget https://raw.githubusercontent.com/zos-spark/scala-workbench/master/files/installer.properties.java && tail -n +3 installer.properties.java | tee installer.properties && cat installer.properties && chmod +x ibm-java-s390x-sdk-8.0-5.41.bin ;
@@ -340,6 +341,7 @@ before_install:
 script:
   - |
     cd runtime-testsuite;
+    ps -aef ;
     mvn -q -Dparallel=methods -DthreadCount=4 -Dtest=java.* test ;
     cd ../tool-testsuite ;
     mvn test ;
