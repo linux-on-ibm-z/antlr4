@@ -266,6 +266,7 @@ matrix:
       stage: extended-test	  
     - os: linux
       arch: s390x
+      jdk: openjdk8
       dist: bionic
       env: TARGET=java
       addons:
