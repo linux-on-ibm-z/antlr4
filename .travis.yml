@@ -205,7 +205,7 @@ matrix:
       env: TARGET=go
       stage: main-test
     - os: linux
-	    arch: s390x
+      arch: s390x
       dist: bionic
       compiler: clang
       jdk: openjdk8
@@ -220,9 +220,9 @@ matrix:
             - g++
             - uuid-dev
             - clang
-			      - maven	
+            - maven	
     - os: linux
-	    arch: s390x
+      arch: s390x
       dist: bionic
       compiler: clang
       jdk: openjdk8
@@ -237,9 +237,9 @@ matrix:
             - g++
             - uuid-dev
             - clang
-			      - maven		
+            - maven		
     - os: linux
-	    arch: s390x
+      arch: s390x
       dist: bionic
       compiler: clang
       jdk: openjdk8
@@ -254,72 +254,72 @@ matrix:
             - g++
             - uuid-dev
             - clang
-			      - maven    
+            - maven    
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk7
       env: TARGET=java
-	    addons:
+      addons:
         apt:
           - maven
       stage: extended-test	  
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk8
       env: TARGET=java
-	    addons:
+      addons:
         apt:
           - maven
       stage: smoke-test
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       language: php
       php:
         - 7.2
       jdk: openjdk8
       env: TARGET=php
-	    addons:
+      addons:
         apt:
           - maven
       stage: main-test  
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk8
       env: TARGET=python2
-	    addons:
+      addons:
         apt:
           - maven
       stage: main-test 
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk8
       env: TARGET=python3
       addons:
         apt:
           packages:
             - python3.7
-			      - maven
+            - maven
       stage: main-test  
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk8
       env: TARGET=javascript
-	    addons:
+      addons:
         apt:
           - maven
       stage: main-test
     - os: linux
-	    arch: s390x
-	    dist: bionic
+      arch: s390x
+      dist: bionic
       jdk: openjdk8
       env: TARGET=go
-	    addons:
+      addons:
         apt:
           - maven
           - golang
