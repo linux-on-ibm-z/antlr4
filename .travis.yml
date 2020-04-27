@@ -326,7 +326,7 @@ matrix:
       stage: main-test
 
 before_install:
-  - f="./.travis/before-install-$TRAVIS_OS_NAME-$TARGET.sh"; ! [ -x "$f" ] || "$f"
+  - f="./.travis/before-install-$TRAVIS_OS_NAME-$TARGET.sh"; valuef=$?; echo $valuef; ! [ -x "$f" ] || "$f" ; valuef2=$?; echo $valuef2;
 script:
   - |
     cd runtime-testsuite;
