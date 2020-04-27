@@ -332,4 +332,4 @@ script:
     cd runtime-testsuite;
     travis_wait 40 ../.travis/run-tests-$TARGET.sh;
     rc=$?;
-    exit $rc
+    travis_terminate $rc
