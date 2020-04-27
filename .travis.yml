@@ -208,7 +208,7 @@ matrix:
       arch: s390x
       dist: bionic
       compiler: clang
-      jdk: openjdk8
+      jdk: openjdk11
       env:
         - TARGET=cpp
         - CXX=g++
@@ -225,7 +225,7 @@ matrix:
       arch: s390x
       dist: bionic
       compiler: clang
-      jdk: openjdk8
+      jdk: openjdk11
       env:
         - TARGET=cpp
         - CXX=g++
@@ -242,7 +242,7 @@ matrix:
       arch: s390x
       dist: bionic
       compiler: clang
-      jdk: openjdk8
+      jdk: openjdk11
       env:
         - TARGET=cpp
         - CXX=g++
@@ -258,7 +258,7 @@ matrix:
     - os: linux
       arch: s390x
       dist: bionic
-      jdk: openjdk7
+      jdk: openjdk11
       env: TARGET=java
       addons:
         apt:
@@ -266,7 +266,7 @@ matrix:
       stage: extended-test	  
     - os: linux
       arch: s390x
-      jdk: openjdk8
+      jdk: openjdk11
       dist: bionic
       env: TARGET=java
       addons:
@@ -279,7 +279,7 @@ matrix:
       language: php
       php:
         - 7.2
-      jdk: openjdk8
+      jdk: openjdk11
       env: TARGET=php
       addons:
         apt:
@@ -288,7 +288,7 @@ matrix:
     - os: linux
       arch: s390x
       dist: bionic
-      jdk: openjdk8
+      jdk: openjdk11
       env: TARGET=python2
       addons:
         apt:
@@ -297,7 +297,7 @@ matrix:
     - os: linux
       arch: s390x
       dist: bionic
-      jdk: openjdk8
+      jdk: openjdk11
       env: TARGET=python3
       addons:
         apt:
@@ -308,7 +308,7 @@ matrix:
     - os: linux
       arch: s390x
       dist: bionic
-      jdk: openjdk8
+      jdk: openjdk11
       env: TARGET=javascript
       addons:
         apt:
